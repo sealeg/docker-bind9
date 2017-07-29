@@ -10,6 +10,7 @@ EXPOSE 53 53/udp
 COPY entrypoint.sh /
 RUN  chmod u+x /entrypoint.sh
 
+VOLUME ["/var/named"]
+
 ENTRYPOINT ["/entrypoint.sh"]
-#CMD ["named", "-u", "named", "-f"]
 
